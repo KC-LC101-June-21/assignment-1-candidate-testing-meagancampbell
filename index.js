@@ -1,16 +1,20 @@
 const input = require('readline-sync');
 
 // TODO 2: modify your quiz app to ask 5 questions //
+function score (){
+sum = a + b + c + d;
+console.log = sum;
 
+}
 // TODO 1.1a: Define candidateName // 
 let candidateName;
 
 
 
-function candidateTotal() {
+function question() {
     let question = questions[currentQuestion];
-    let out = $('.output').value;
-if (out == questions.answer) {
+    let total = value;
+if (value == questions.answer) {
         score++;
     }
     currentQuestion++;
@@ -19,34 +23,12 @@ if (out == questions.answer) {
     } else {
         showQuestion();
     }
-
-    $('.sub').click(function () {
-        $('.output').val('');
-    });
-}
-
-function showQuestion() {
-    let question = questions[currentQuestion];
-    $('.input').val(question.title);
 }
 
 
 
 candidateName = prompt("What is your name?");
 
-
-let questions = [
-    {
-        title: "Are you a U.S. Citizen?",
-        answer: "Yes"
-    },
-
-    {
-        title: "Do you have a masters degree in a STEM field, including engineering, biological science, physical science, computer science or mathematics, from an accredited institution?",
-        answer: "Yes"
-    }
-
-];
 
 
 
