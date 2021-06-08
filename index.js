@@ -5,74 +5,50 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 let candidateName;
 
-// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let score = 0;
-let question;
-let correctAnswer;
-let candidateAnswer;
-let incorrectAnswer;
-let correctAnswers;
-let candidateAnswers;
+
+
+function candidateTotal() {
+    let question = questions[currentQuestion];
+    let out = $('.output').value;
+if (out == questions.answer) {
+        score++;
+    }
+    currentQuestion++;
+    if (currentQuestion >= questions.length) {
+        showSummary();
+    } else {
+        showQuestion();
+    }
+
+    $('.sub').click(function () {
+        $('.output').val('');
+    });
+}
+
+function showQuestion() {
+    let question = questions[currentQuestion];
+    $('.input').val(question.title);
+}
+
 
 
 candidateName = prompt("What is your name?");
 
-let questionOne = prompt("Are you a U.S. Citizen?");
 
-if (questionOne.candidateAnswer === "Yes"); {
-  console.log("Correct");
+let questions = [
+    {
+        title: "Are you a U.S. Citizen?",
+        answer: "Yes"
+    },
 
-} else if (candidateAnswer === "No") {
-  console.log("Incorrect");
+    {
+        title: "Do you have a masters degree in a STEM field, including engineering, biological science, physical science, computer science or mathematics, from an accredited institution?",
+        answer: "Yes"
+    }
 
-}
+];
 
-let questionTwo = prompt("Do you have a masters degree in a STEM field, including engineering, biological science, physical science, computer science or mathematics, from an accredited institution?");
 
-if (questionTwo.candidateAnswer === "Yes") {
-  console.log("Correct");
-
-} else if (candidateAnswer === "No") {
-  console.log("Incorrect");
-
-}
-
-let questionThree = prompt("Do you have a masters degree in a STEM field, including engineering, biological science, physical science, computer science or mathematics, from an accredited institution?");
-
-if (questionThree.candidateAnswer === "Yes") {
-  console.log("Correct");
-
-} else if (candidateAnswer === "No") {
-  console.log("Incorrect");
-
-}
-
-let questionFour = prompt("Do you have at least two years of related professional experience obtained after degree completion or at least 1,000 hours pilot-in-command time on a jet aircraft?")
-if (questionFour.candidateAnswer === "Yes") {
-  console.log("Correct");
-
-} else if (candidateAnswer === "No") {
-  console.log("Incorrect");
-
-}
-
-let questionFive = prompt("Are you able to pass the NASA long-duration flight astronaut physical?")
-if (questionFive.candidateAnswer === "Yes") {
-  console.log("Correct");
-
-} else if (candidateAnswer === "No") {
-  console.log("Incorrect");
-
-}
-
-let questionFive = prompt("And finally, what is NASA's motto?")
-if (questionFive.candidateAnswercandidateAnswer === "For the benefit of all") {
-  console.log("Correct");
-
-} else if (candidateAnswer === "") {
-  console.log("Incorrect");
-
-}
 
 
 //this sucks!!!!!
