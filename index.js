@@ -1,14 +1,24 @@
 const input = require('readline-sync');
 
 // TODO 2: modify your quiz app to ask 5 questions //
-function score (){
+
+// TODO 1.1a: Define candidateName // 
+let candidateName;
+// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
+let question;
+let correctAnswer;
+let candidateAnswer;
+let questions;
+let correctAnswers;
+let candidateAnswers;
+
+function total (){
 sum = a + b + c + d;
 console.log = sum;
 
 }
 // TODO 1.1a: Define candidateName // 
 let candidateName;
-
 
 
 function question() {
@@ -26,8 +36,8 @@ if (value == questions.answer) {
 }
 
 
-
 candidateName = prompt("What is your name?");
+
 
 
 
@@ -48,3 +58,4 @@ module.exports = {
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
 };
+
