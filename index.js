@@ -3,7 +3,7 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 
@@ -14,17 +14,18 @@ let correctAnswers;
 let candidateAnswers;
 
 
-console.log("What is your name?");
+let candidateName = input.question("Enter your name: ");
+console.log("Your name is " + candidateName);
 
-// select all elements
-const start = document.write("start");
-const quiz = document.write("quiz");
-const question = document.write("question");
+// // select all elements
+// const start = document.write("start");
+// const quiz = document.write("quiz");
+// const question = document.write("question");
 
-const choiceA = document.write("A");
-const choiceB = document.write("B");
-const choiceC = document.write("C");
-const counter = document.write("counter");
+// const choiceA = document.write("A");
+// const choiceB = document.write("B");
+// const choiceC = document.write("C");
+// const counter = document.write("counter");
 
 
 
