@@ -23,6 +23,7 @@ let questions;
 let answer1 = 'a' || 'Sally Ride';
 let answer2 = 'True';
 let answer3 = 'b' || 40;
+let answer4 = 'b' || 'trajectory' || 'Trajectory';
 candidateName = input.question('Enter your name: ');
 console.log('Hello Astronaut Candidate ' + candidateName + '\n');
 
@@ -51,6 +52,22 @@ if (question3 === answer3) {
    console.log('wrong' + ' the correct answer was 40' + '\n'+ '\n');
 }
 
+
+question4 = input.question("4. Given the array [8, 'Orbit', 'Trajectory', 45]", what entry is at index 2?' + '\n' + 'a:   Orbit' + '\n'+ 'b:   Trajectory' + 'c:45' + '\n' ); 
+
+if (question4 === answer4 ) {
+   console.log('wrong' + ' the correct answer was Trajectory'+ '\n');
+} else {
+   console.log("correct" + '\n');
+}
+
+question5 = input.question('What is the minimum crew size for the ISS?'' + '\n' + '   a: 6' + '\n' + '   b: 4' + 'c:3' + '\n');
+
+if (question5 === answer5) {
+   console.log('correct' + '\n');
+} else {
+   console.log('wrong' + ' the correct answer was 3' + '\n'+ '\n');
+}
 
 
 function gradeQuiz(candidateAnswers) {
