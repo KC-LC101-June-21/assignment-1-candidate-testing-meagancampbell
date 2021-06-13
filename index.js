@@ -53,7 +53,7 @@ if (question3 === answer3) {
 }
 
 
-question4 = input.question("4. Given the array [8, 'Orbit', 'Trajectory', 45]", what entry is at index 2?' + '\n' + 'a:   Orbit' + '\n'+ 'b:   Trajectory' + 'c:45' + '\n' ); 
+question4 = input.question('4. Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?' + '\n' + 'a:   Orbit' + '\n'+ 'b:   Trajectory' + 'c:45' + '\n' ); 
 
 if (question4 === answer4 ) {
    console.log('wrong' + ' the correct answer was Trajectory'+ '\n');
