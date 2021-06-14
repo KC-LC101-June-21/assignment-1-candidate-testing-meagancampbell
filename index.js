@@ -17,6 +17,7 @@ let answer2 = 'True';
 let answer3 = 'b' || 40;
 let answer4 = 'b' || 'trajectory' || 'Trajectory';
 let answer5 = 'c';
+
 candidateName = input.question('Enter your name: ');
 console.log('Hello Astronaut Candidate ' + candidateName + '\n');
 
