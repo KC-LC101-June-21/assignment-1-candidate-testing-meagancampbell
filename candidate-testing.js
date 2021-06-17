@@ -19,14 +19,14 @@ let correctAnswers = '';
 let candidateAnswers = '';
 let i = 0;
 
-function askForName() {
+function askForName(){
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question('Candidate Name: ');
 }
 
 askForName;
 
-function askQuestion() {
+function askQuestion(){
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (let i = 0; i < questions.length || i < 6;i++){
         candidateAnswer = (input.question(questions[i]).toLowerCase());
@@ -35,7 +35,7 @@ function askQuestion() {
     }
 }
 
-function gradeQuiz() {
+function gradeQuiz(){
   for (let i = 0; i < questions[i].length; i++){
     // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
     if (correctAnswers() === candidateAnswers()){
