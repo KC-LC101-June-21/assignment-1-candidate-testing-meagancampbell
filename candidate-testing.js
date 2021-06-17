@@ -33,9 +33,7 @@ function askQuestion() {
         console.log(candidateAnswers);
         console.log('Your Answer: ' + `${candidateAnswers}`);
         console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n');
-        
     }
-
 
 }
 
@@ -45,10 +43,13 @@ function gradeQuiz(candidateAnswers) {
   candidateAnswer = (input.question(questions[i]).toLowerCase());
   candidateAnswers.push(candidateAnswer);
 }
+  let overallText = '>>>Overall Grade: ';
+  let statusPassed = '>>>Status: PASSED<<<';
+  let statusFailed = '>>>Status: FAILED<<<';
   if (grade > 80){
-    console.log('>>>Overall Grade: ' `${grade}` '<<<' + '\n' + '>>>Status: PASSED<<<');
+    console.log(overallText + `${grade}` '<<<' + '\n' + statusPassed);
   } else if (grade < 80){
-    console.log('>>>Overall Grade: ' `${grade}` '<<<' + '\n' + '>>>Status: FAILED<<<');
+    console.log(overallText + `${grade}` '<<<' + '\n' + statusFailed);
   console.log(grade);
   }  
 
