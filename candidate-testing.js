@@ -45,9 +45,9 @@ function gradeQuiz(candidateAnswers) {
 
 
   if (grade > 80){
-    console.log(`${grade} passed`);
+    console.log('>>>Overall Grade: ' `${grade}` '<<<' + '\n' + '>>>Status: PASSED<<<');
   } else if (grade < 80){
-    console.log(`${grade} failed`);
+    console.log('>>>Overall Grade: ' `${grade}` '<<<' + '\n' + '>>>Status: FAILED<<<');
   console.log(grade);
   }  
 
