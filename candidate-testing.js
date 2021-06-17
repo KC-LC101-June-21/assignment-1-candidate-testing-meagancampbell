@@ -15,8 +15,8 @@ let question5 = ['5) What is the minimum crew size for the ISS?' + '\n'];
 let correctAnswer = '';
 let candidateAnswer = '';
 let questions = [question1, question2, question3, question4, question5];
-let correctAnswers = '';
-let candidateAnswers = '';
+let correctAnswers = ['sally ride', 'true', '40', 'trajectory', '3'];
+let candidateAnswers = [];
 let i = 0;
 
 function askForName(){
