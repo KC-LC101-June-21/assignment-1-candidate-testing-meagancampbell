@@ -30,8 +30,10 @@ function askQuestion() {
  for (let i = 0; i < questions.length || i < 6;i++){
         candidateAnswer = (input.question(questions[i]).toLowerCase());
         candidateAnswers.push(candidateAnswer);
+        console.log(candidateAnswers);
         console.log('Your Answer: ' + `${candidateAnswers}`);
         console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n');
+        
     }
 
 
