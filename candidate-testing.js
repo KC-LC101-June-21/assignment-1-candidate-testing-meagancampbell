@@ -4,6 +4,7 @@ const input = require('readline-sync');
 
 // TODO 1.1a: Define candidateName // 
 let candidateName = ('');
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
 let question1 = ['1) Who was the first American woman in space?' + '\n'];
@@ -53,11 +54,11 @@ function gradeQuiz() {
   return grade;
 }
 
-function runProgram() {
+function runProgram(){
   askForName();
   // TODO 1.1c: Ask for candidate's name //
   askQuestion();
-  for (let i = 0; i < questions.length; i++) {
+  for (let i = 0; i < questions.length; i++){
     candidateAnswers.push(askQuestion(questions[i]));
      }
     console.log(candidateAnswers);
@@ -66,7 +67,7 @@ function runProgram() {
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
-module.exports = {
+module.exports ={
   candidateName: candidateName,
   question: question,
   correctAnswer: correctAnswer,
