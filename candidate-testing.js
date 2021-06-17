@@ -16,18 +16,18 @@ let candidateAnswer = '';
 let questions = [question1, question2, question3, question4, question5];
 let correctAnswers = '';
 let candidateAnswers = '';
-
+let i = 0;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question('Candidate Name: ');
-  //let greetingString = ('\n' + 'Candidate Name: ' + candidateName + '\n');
-  //console.log(greetingString.toLowerCase());
 }
+
+askForName;
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  for (let i = 0; i < questions.length || i < 6;i++) {
+  for (let i = 0; i < questions.length || i < 6;i++){
         candidateAnswer = (input.question(questions[i]).toLowerCase());
         candidateAnswers.push(candidateAnswer);
         console.log(candidateAnswers);
@@ -35,10 +35,10 @@ function askQuestion() {
 }
 
 function gradeQuiz() {
-  for (let i = 0; i < questions[i].length; i++) {
+  for (let i = 0; i < questions[i].length; i++){
     // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-    if (correctAnswers() === candidateAnswers()) {
-        console.log('Correct Answer: ' + `${candidateAnswers[i]}`);
+    if (correctAnswers() === candidateAnswers()){
+        console.log('Your Answer: ' + `${candidateAnswers[i]}`);
         console.log('Correct Answer: ' + `${correctAnswers[i]}`);
          }
   }
