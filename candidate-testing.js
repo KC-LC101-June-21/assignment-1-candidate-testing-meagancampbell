@@ -31,7 +31,7 @@ function askQuestion() {
         candidateAnswer = (input.question(questions[i]).toLowerCase());
         candidateAnswers.push(candidateAnswer);
         console.log('Your Answer: ' + `${candidateAnswers}`);
-        console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n);
+        console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n');
     }
 
 
