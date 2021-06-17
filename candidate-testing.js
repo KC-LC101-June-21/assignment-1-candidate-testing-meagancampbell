@@ -44,10 +44,15 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
 
-  let grade;
-  
+  if (grade > 80){
+    console.log(`${grade} passed`);
+  } else if (grade < 80){
+    console.log(`${grade} failed`);
+  console.log(grade);
+  }  
 
   return grade;
+
 }
 
 function runProgram() {
