@@ -40,10 +40,11 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-
+  for (let i = 0; i < questions.length || i < 6;i++){
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-
+  candidateAnswer = (input.question(questions[i]).toLowerCase());
+  candidateAnswers.push(candidateAnswer);
+}
   if (grade > 80){
     console.log('>>>Overall Grade: ' `${grade}` '<<<' + '\n' + '>>>Status: PASSED<<<');
   } else if (grade < 80){
@@ -52,7 +53,7 @@ function gradeQuiz(candidateAnswers) {
   }  
 
   return grade;
-
+  
 }
 
 function runProgram() {
