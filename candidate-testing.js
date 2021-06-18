@@ -19,7 +19,6 @@ let correctAnswers = ['sally ride', 'true', '40', 'trajectory', '3'];
 let candidateAnswers = [];
 let i = 0;
 
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question('Candidate Name: ');
@@ -27,35 +26,31 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
- for (let i = 0; i < questions.length || i < 6;i++){
+ for (let i = 0; i < questions.length ;i++){
         candidateAnswer = (input.question(questions[i]).toLowerCase());
         candidateAnswers.push(candidateAnswer);
         console.log(candidateAnswers);
-        console.log('Your Answer: ' + `${candidateAnswers}`);
+        console.log('Your Answer: ' + `${candidateAnswers[i]}`);
         console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n');
     }
-
 }
 
 function gradeQuiz(candidateAnswers) {
-  for (let i = 0; i < questions.length || i < 6;i++){
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  candidateAnswer = (input.question(questions[i]).toLowerCase());
-  candidateAnswers.push(candidateAnswer);
-}
-  let overallText = '>>>Overall Grade: ';
-  let statusPassed = '>>>Status: PASSED<<<';
-  let statusFailed = '>>>Status: FAILED<<<';
-  if (grade > 80){
-    console.log(overallText + `${grade}` '<<<' + '\n' + statusPassed);
-  } else if (grade < 80){
-    console.log(overallText + `${grade}` '<<<' + '\n' + statusFailed);
-  console.log(grade);
-  }  
-
+  let grade = 0;
+  for (let i = 0; i < questions.length; i++){
+    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()){
+      grade +=1;
+    }
+  }
+  let percentageGrade = grade / 5 * 100;
+  if (percentageGrade > 80){
+    console.log('yay!');
+  }else{
+    console.log('boo');
+  }
   return grade;
-  
 }
+   
 
 function runProgram() {
   askForName();
