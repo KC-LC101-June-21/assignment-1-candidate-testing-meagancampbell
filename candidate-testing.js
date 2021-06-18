@@ -20,13 +20,13 @@ let candidateAnswers = [];
 let i = 0;
 
 function askForName() {
-  // TODO 1.1b: Ask for candidate's name //
-  let candidateName = input.question('Candidate Name: ');
+    // TODO 1.1b: Ask for candidate's name //
+    let candidateName = input.question('Candidate Name: ');
 }
 
 function askQuestion() {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
- for (let i = 0; i < questions.length ;i++){
+    // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+    for (let i = 0; i < questions.length; i++) {
         candidateAnswer = (input.question(questions[i]).toLowerCase());
         candidateAnswers.push(candidateAnswer);
         console.log(candidateAnswers);
@@ -36,29 +36,29 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-  let grade = 0;
-  for (let i = 0; i < questions.length; i++){
-    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()){
-      grade +=1;
+    let grade = 0;
+    for (let i = 0; i < questions.length; i++) {
+        if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) {
+            grade += 1;
+        }
     }
-  }
-  let percentageGrade = grade / 5 * 100;
-  if (percentageGrade >= 80){
-    console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
-    console.log('>>>Status: PASSED<<<');
-  }else{
-    console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
-    console.log('>>>Status: FAILED<<<');
-  }
-  return grade;
+    let percentageGrade = grade / 5 * 100;
+    if (percentageGrade >= 80) {
+        console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
+        console.log('>>>Status: PASSED<<<');
+    } else {
+        console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
+        console.log('>>>Status: FAILED<<<');
+    }
+    return grade;
 }
 
 function runProgram() {
-  askForName();
-  // TODO 1.1c: Ask for candidate's name //
-  
-  askQuestion();
-  gradeQuiz(this.candidateAnswers);
+    askForName();
+    // TODO 1.1c: Ask for candidate's name //
+
+    askQuestion();
+    gradeQuiz(this.candidateAnswers);
 }
 
 // Don't write any code below this line //
