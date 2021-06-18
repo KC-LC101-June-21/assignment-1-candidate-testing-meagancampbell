@@ -4,11 +4,11 @@ const input = require('readline-sync');
 let candidateName;
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
-let question1 = ['1) Who was the first American woman in space?' + '\n'];
-let question2 = ['2) True or false: 5 kilometer = 5000 meters?' + '\n'];
-let question3 = ['3) (5 + 3)/2 * 10 =' + '\n'];
-let question4 = ['4) Given the array [8,' + ' Orbit' + ' ,' + 'Trajectory' + ' ,' + '45] what entry is at index 2?' + '\n'];
-let question5 = ['5) What is the minimum crew size for the ISS?' + '\n'];
+let question1 = ['1) Who was the first American woman in space? ' + '\n'];
+let question2 = ['2) True or false: 5 kilometer = 5000 meters? ' + '\n'];
+let question3 = ['3) (5 + 3)/2 * 10 = ' + '\n'];
+let question4 = ['4) Given the array [8,' + ' Orbit' + ' ,' + 'Trajectory' + ' ,' + '45] what entry is at index 2? ' + '\n'];
+let question5 = ['5) What is the minimum crew size for the ISS? ' + '\n'];
 let correctAnswer;
 let candidateAnswer;
 let questions = [question1, question2, question3, question4, question5];
