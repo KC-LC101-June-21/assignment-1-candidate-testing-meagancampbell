@@ -43,10 +43,12 @@ function gradeQuiz(candidateAnswers) {
     }
   }
   let percentageGrade = grade / 5 * 100;
-  if (percentageGrade > 80){
-    console.log('yay!');
+  if (percentageGrade >= 80){
+    console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
+    console.log('>>>Status: PASSED<<<');
   }else{
-    console.log('boo');
+    console.log(`>>>Overall Grade: ${percentageGrade}% (${grade} out of 5 responses correct)<<<`);
+    console.log('>>>Status: FAILED<<<');
   }
   return grade;
 }
