@@ -31,6 +31,7 @@ function askQuestion(){
         console.log('Correct Answer: ' + `${correctAnswers[i]}` + '\n');
     }
 }
+ //sumScore += score[item]
 
 function gradeQuiz(candidateAnswers){
   let grade = 0;
